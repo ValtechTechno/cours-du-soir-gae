@@ -87,31 +87,130 @@
               <h1>
                 Google App Engine
               </h1>
+				  <img src="imgs/appengine-logo.png" title="App Engine logo" />
             </hgroup>
           </section>
         </div>
 
         <div class="slide" id="toc-slide">
+			<header>Sommaire</header>
           <section>
-				<h2>Sommaire</h2>
-				<ul>
-					<li>Type</li>
-					<li></li>
+				<ul class="bullets">
+					<li>Types de Cloud</li>
+					<li>Google App Engine</li>
+					<ul class="bullets">
+						<li>Composants</li>
+						<li>Limites</li>
+						<li>Administration</li>
+						<li>API Python</li>
+						<li>API Java</li>
+					</ul>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="type-slide">
+			<header>Types de Cloud</header>
+          <section>
+				<ul class="bullets">
+					<li>IaaS : Infrastructure as a Service (Amazon Web Services)</li>
+					<li>PaaS : Platform as a Service (<strong>AppEngine</strong>, Azure)</li>
+					<li>SaaS : Software as a Service (Google Apps, Wordpress)</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="presentation-slide">
+			<header>Google App Engine</header>
+          <section>
+				<ul class="bullets">
+					<li>Hébergement Web</li>
+					<li>Monté (et descente) en charge auto.</li>
+					<li>BigTable / NoSQL</li>
+					<li>Sandbox</li>
+					<li>Gratuit avec quota / payant</li>
+					<li>Python / Java</li>
+					<li>Release tous les 2 mois</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="components-slide">
+			<header>Composants</header>
+          <section>
+				<ul class="bullets">
+					<li>Google Accounts / OpenId</li>
+					<li>Memcache</li>
+					<li>URL Fetch</li>
+					<li>Mail</li>
+					<li>Images</li>
+					<li>XMPP</li>
+					<li>Task Queue</li>
+					<li>Cron</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="limits-slide">
+			<header>Limites</header>
+          <section>
+				<ul class="bullets">
+					<li>pas de sockets</li>
+					<li>pas de Thread</li>
+					<li>pas d'écriture de fichiers</li>
+					<li>code executé depuis une requête HTTP</li>
+					<li>limite d'éxecution de 30 sec / requête</li>
+					<li>pas d'extensions C pour Python</li>
+					<li>subset de Java SE (JRE Class White List)</li>
+					<li>SSL/HTTPS seulement via *.appspot.com</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="administration-slide">
+			<style>
+				#administration-slide img { border: 1px solid black; width: 98% }
+			</style>
+			<header>Administration</header>
+          <section>
+				<img src="imgs/appengine-console.png" title="App Engine console" />
+				<p class="center"><a href="https://appengine.google.com">https://appengine.google.com</a></p>
+          </section>
+        </div>
+
+        <div class="slide" id="python-api-slide">
+			<header>Python API</header>
+          <section>
+				<ul class="bullets">
 					<li></li>
 				</ul>
           </section>
         </div>
 
-        <div class="slide" id="toc-slide">
+        <div class="slide" id="java-api-slide">
+			<header>Java API</header>
           <section>
-				<h2>Sommaire</h2>
-				<ul>
-					<li>Type</li>
-					<li></li>
+				<ul class="bullets">
 					<li></li>
 				</ul>
           </section>
         </div>
+
+        <div class="slide" id="resources-slide">
+			<style>
+				#resources-slide ul { font-size: 2em; }
+			</style>
+			<header>Resources</header>
+          <section>
+				<ul>
+					<li><img src="imgs/shorten-url.png"/> <a href="http://shorten-url.appspot.com/">shorten-url.appspot.com/</a> - <a href="https://github.com/paulgreg/gae-python-urlshortener">source</a></li>
+					<li><img src="imgs/build-status.png"/> <a href="http://build-status.appspot.com/">build-status.appspot.com/</a> - <a href="http://code.google.com/p/build-status/source/browse/#svn%2Ftrunk">source</a></li>
+					<li><img src="imgs/rsstodolist.png"/> <a href="http://rsstodolist.appspot.com/">rsstodolist.appspot.com/</a> - <a href="http://code.google.com/p/rsstodolist/source/browse/#svn%2Ftrunk%2Fpython-gae">source</a></li>
+					<li><a href="http://rsstodolist.appspot.com/?n=gae&l=50">Liens sur Google App Engine (RSS)</a></li>
+				</ul>
+          </section>
+        </div>
+			
 
 
 
