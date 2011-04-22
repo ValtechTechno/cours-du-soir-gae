@@ -99,11 +99,12 @@
 					<li>Types de Cloud</li>
 					<li>Google App Engine</li>
 					<ul class="bullets">
-						<li>Composants</li>
+						<li>Services</li>
 						<li>Limites</li>
 						<li>Administration</li>
-						<li>API Python</li>
-						<li>API Java</li>
+						<li>Java</li>
+						<li>Python</li>
+						<li>Dojo Python</li>
 					</ul>
 				</ul>
           </section>
@@ -126,23 +127,23 @@
 				<ul class="bullets">
 					<li>Hébergement Web</li>
 					<li>Monté (et descente) en charge auto.</li>
-					<li>BigTable / NoSQL</li>
+					<li>Python 2.5 / Java 6</li>
+					<li>NoSQL</li>
 					<li>Sandbox</li>
 					<li>Gratuit avec quota / payant</li>
-					<li>Python / Java</li>
 					<li>Release tous les 2 mois</li>
 				</ul>
           </section>
         </div>
 
-        <div class="slide" id="components-slide">
-			<header>Composants</header>
+        <div class="slide" id="services-slide">
+			<header>Services</header>
           <section>
 				<ul class="bullets">
-					<li>Google Accounts / OpenId</li>
+					<li>BigTable</li>
+					<li>Google Accounts / OpenId / OAuth</li>
 					<li>Memcache</li>
-					<li>URL Fetch</li>
-					<li>Mail</li>
+					<li>URL Fetch, Mail</li>
 					<li>Images</li>
 					<li>XMPP</li>
 					<li>Task Queue</li>
@@ -161,7 +162,7 @@
 					<li>code executé depuis une requête HTTP</li>
 					<li>limite d'éxecution de 30 sec / requête</li>
 					<li>pas d'extensions C pour Python</li>
-					<li>subset de Java SE (JRE Class White List)</li>
+					<li>subset de Java SE (<a href="https://code.google.com/appengine/docs/java/jrewhitelist.html">JRE Class White List</a>)</li>
 					<li>SSL/HTTPS seulement via *.appspot.com</li>
 				</ul>
           </section>
@@ -178,20 +179,67 @@
           </section>
         </div>
 
-        <div class="slide" id="python-api-slide">
-			<header>Python API</header>
+        <div class="slide" id="java-slide">
+			<header>Java</header>
           <section>
 				<ul class="bullets">
-					<li></li>
+					<li>Java Servlet API 2.4</li>
+					<li><abbr title="Java Server Pages">JSP</abbr> + <abbr title="JavaServer Pages Standard Tag Library">JSTL 3</abbr></li>
+					<li><abbr title="Java Server Faces">JSF</abbr> 1.1 - 2.0 2</abbr></li>
+					<li><abbr title="Java Data Objects">JDO</abbr>, <abbr title="Java Persistence API">JPA</abbr></li>
+					<li>Principales libraires et frameworks compatibles (<a href="https://code.google.com/p/googleappengine/wiki/WillItPlayInJava">Will it play in App Engine ?</a>)</li>
+					<li>Frameworks dédiés : <a href="http://gaelyk.appspot.com/">Gaelyk</a></li>
 				</ul>
           </section>
         </div>
 
-        <div class="slide" id="java-api-slide">
-			<header>Java API</header>
+        <div class="slide" id="dojo-java-slide">
+			<header>Dojo Java</header>
           <section>
 				<ul class="bullets">
-					<li></li>
+					<li>Kata</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="python-slide">
+			<header>Python</header>
+          <section>
+				<ul class="bullets">
+					<li>Python 2.5</li>
+					<li>par défaut : webapp (mapping, templating)</li>
+					<li><a href="http://www.djangoproject.com/">Django</a>, <a href="http://www.cherrypy.org/">CherryPy</a>, 
+						<a href="http://pylonshq.com/">Pylons</a>, <a href="http://webpy.org/">web.py</a> ou <a href="http://www.web2py.com/">web2py</a>
+					</li>
+				</ul>
+          </section>
+        </div>
+
+        <div class="slide" id="shortener-slide">
+			<style>
+				#shortener-slide img { border: 1px solid black; width: 98% }
+			</style>
+			<header>http://valte.ch</header>
+          <section>
+				<img src="imgs/url-shorten.png" title="url shortener to build" />
+				<p class="center">
+					<a href="http://valte.ch">http://valte.ch</a> -
+					<a href="https://github.com/paulgreg/gae-python-urlshortener">source sur github</a>
+				</p>
+          </section>
+        </div>
+
+        <div class="slide" id="dojo-python-slide">
+			<header>Dojo Python & tour</header>
+          <section>
+				<ul class="bullets">
+					<li>Point de départ : <a href="https://github.com/paulgreg/gae-python-urlshortener/tree/dojo">branche dojo</a></li>
+					<li>app.yaml, index.yaml</li>
+					<li>Kata : shortener.py</li>
+					<li>Kata : urlModel.py</li>
+					<li>Controlleur : controller.py</li>
+					<li>Templating : home.html</li>
+					<li>A l'arrivé : <a href="https://github.com/paulgreg/gae-python-urlshortener/tree/dojo-working-version">tag dojo-working-version</a></li>
 				</ul>
           </section>
         </div>
@@ -203,7 +251,8 @@
 			<header>Resources</header>
           <section>
 				<ul>
-					<li><img src="imgs/shorten-url.png"/> <a href="http://shorten-url.appspot.com/">shorten-url.appspot.com/</a> - <a href="https://github.com/paulgreg/gae-python-urlshortener">source</a></li>
+					<li><img src="imgs/shorten-url.png"/> <a href="http://valte.ch">valte.ch</a> 
+						ou <a href="http://shorten-url.appspot.com/">shorten-url.appspot.com/</a> - <a href="https://github.com/paulgreg/gae-python-urlshortener">source</a></li>
 					<li><img src="imgs/build-status.png"/> <a href="http://build-status.appspot.com/">build-status.appspot.com/</a> - <a href="http://code.google.com/p/build-status/source/browse/#svn%2Ftrunk">source</a></li>
 					<li><img src="imgs/rsstodolist.png"/> <a href="http://rsstodolist.appspot.com/">rsstodolist.appspot.com/</a> - <a href="http://code.google.com/p/rsstodolist/source/browse/#svn%2Ftrunk%2Fpython-gae">source</a></li>
 					<li><a href="http://rsstodolist.appspot.com/?n=gae&l=50">Liens sur Google App Engine (RSS)</a></li>
